@@ -1,75 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trade On Your Opinion & Earn Profit - Probo</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
-    <!-- add favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon.ico">
-    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" as="image" href="/assets/img/logo.webp" />
+  <title>Trade On Your Opinion &amp; Earn Profit - Probo</title>
+  <meta name="description" content="Trades on your Opinion with over 2 crore users. Download the Probo app and Earn Profit by your Opinions. Gyan Jaha, Probo Waha. Select a Event &gt; Trade on Your Opinon &gt; Earn Profits" />
+  <meta name="keywords" content="Probo, probo app, probo app download, probo apk download, probo apk, Opinion Trading, Trade on Opinion, Prediction Earning, Predict &amp; Earn" />
+
+  <title>Trade On Your Opinion & Earn Profit - Probo</title>
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="/assets/img/favicon.ico">
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="/assets/img/favicon.ico">
+
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/1024.css" media="screen and (max-width: 1024px)">
+  <link rel="stylesheet" href="./assets/css/768.css" media="screen and (max-width: 768px)">
+
 </head>
+
 <body>
-    <header>
-        <div class="header-left">
-            <a href="/">
-                <img src="./assets/img/logo.webp" alt="Probo Logo" width="106" height="32" class="logo">
-            </a>
+  <div class="overlay"></div>
+  <header>
+    <div class="header-left">
+      <a href="/"><img src="./assets/img/logo.webp" alt="Probo Logo" width="106" height="32" class="logo"></a>
+    </div>
+    <div class="header-center">
+      <nav>
+        <ul class="nav-list">
+          <li class="link-item"><a href="#">Trade</a></li>
+          <li class="link-item"><a href="#">Read</a></li>
+          <li class="link-item"><a href="#">Probo Cares</a></li>
+          <li class="link-item"><a href="#">Careers</a></li>
+        </ul>
+        <div class="download-container">
+          <button class="secondary-btn">Download App</button>
         </div>
-        <div class="header-center" style="flex: 1;">
-            <nav>
-                <ul class="nav-links">
-                    <a href="#"><li class="link-item">Trade</li></a>
-                    <a href="#"><li class="link-item">Read</li></a>
-                    <a href="#"><li class="link-item">Probo Cares</li></a>
-                    <a href="#"><li class="link-item">Careers</li></a>
-                </ul>
-            </nav>
-            <div class="header-center-right">
-                <div class="consent">For 18 years and above only</div>
-                <button class="download-btn">Download App</button>
-                <button class="trade-online-btn">Trade Online</button>
-            </div>
+      </nav>
+      <div class="header-center-right">
+        <div class="consent">For 18 years and above only</div>
+        <button class="secondary-btn">Download App</button>
+        <button class="primary-btn">Trade Online</button>
+      </div>
+    </div>
+    <div class="header-right">
+      <img src="./assets/img/translation.png" alt="Change Language" class="translate" width="25" height="25">
+      <div class="nav-toggle-btn" onclick="toggleNav()">
+        <div class="toggle-line"></div>
+        <div class="toggle-line"></div>
+        <div class="toggle-line"></div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="hero-section">
+      <div class="wrapper">
+        <div class="hero-left">
+          <h1 class="hero-heading">Invest in your</h1>
+          <h1 class="hero-heading">point of view</h1>
+          <div class="hero-subheading">Sports, Entertainment, Economy or Finance.</div>
+          <div class="hero-btns">
+            <button class="secondary-btn">Download App</button>
+            <button class="primary-btn">Trade Online</button>
+            <button class="primary-btn large">Download and get upto ₹100 Bonus</button>
+          </div><br>
+          <div style="display: flex; align-items: center; gap: 5px;">
+          <input type="checkbox" name="age-limit" id="age-limit" checked>
+          <label for="age-limit">For 18 years and above only</label>
+          </div>
         </div>
-        <div class="header-right">
-            <img src="./assets/img/translation.png" alt="Change Language" width="25" height="25" style="margin-left: 10px; cursor: pointer;">
+        <div class="hero-right">
+          <img src="./assets/img/header.webp" alt="" class="hero-image" width="370">
         </div>
-    </header>
-    <main>
-        <section class="hero-section">
-            <div class="hero-left">
-                <h1 class="hero-heading">Invest in your</h1>
-                <h1 class="hero-heading" style="font-size: 4vw; margin-bottom: 32px;">point of view</h1>
-                <h2 class="hero-subheading">Sports, Entertainment, Economy or Finance.</h2>
-                <div class="hero-actions" style="margin-bottom: 10px;">
-                    <button class="download-btn">Download App</button>
-                    <button class="trade-online-btn">Trade Online</button>
-                </div>
-                <div class="hero-consent">
-                    <input type="checkbox" name="age-consent" id="age-consent" checked style="accent-color: var(--nero);">
-                    <label for="age-consent">For 18 years and above only</label>
-                </div>
-            </div>
-            <div class="hero-right">
-                <img src="./assets/img/header.webp" alt="" class="hero-image">
-            </div>
-        </section>
-        <section class="info-slider-section">
-            <div class="info-slider">
-                <div class="info-slider-headings">
-                    <span class="info-slider-heading active">Samachar</span>
-                    <span class="info-slider-heading">Vichaar</span>
-                    <span class="info-slider-heading">Vyapaar</span>
-                </div>
-                <div class="info-slider-title">Be in the know</div>
-                <div class="info-slider-desc">From Sports to Entertainment, Economy, Finance and more. Keep an eye on events in your field of interest.</div>
-            </div>
-            <div class="info-slider-right">
-                <video src="./assets/videos/info-video.mp4" autoplay muted></video>
-                How's this?
-            </div>
-        </section>
-    </main>
+      </div>
+    </section>
+    <section class="info-slider-section" style="background-color:var(--nero); color: white;">
+      <div class="wrapper">
+        <div class="info-slider">
+          <div class="info-headings">
+            <h2 class="info-heading active">Samachar</h2>
+            <h2 class="info-heading">Vichaar</h2>
+            <h2 class="info-heading">Vyapaar</h2>
+          </div>
+          <h3 class="info-title">Be in the know</h3>
+          <p class="info-desc">From Sports to Entertainment, Economy, Finance and more. Keep an eye on events in your field of interest.</p>
+        </div>
+        <div class="info-video">
+          <video src="./assets/videos/info-video.mp4" width="300" autoplay muted controls></video>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer></footer>
+  <script>
+    function toggleNav() {
+      const btn = document.querySelector('.nav-toggle-btn');
+      const nav = document.querySelector('nav');
+      const overlay = document.querySelector('.overlay');
+      btn.classList.toggle("active");
+      nav.classList.toggle("active");
+      overlay.classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
