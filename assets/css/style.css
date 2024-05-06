@@ -37,9 +37,15 @@ body:has( .overlay.active) {
   overflow-y: hidden;
 }
 
-header {
+.header-wrapper {
+  width: 100%;
   position: sticky;
   top: 0;
+  left: 0;
+  background: var(--smoke-gray);
+}
+
+header {
   min-height: 65px;
   padding: 0 16px;
   display: flex;
@@ -47,7 +53,6 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background: var(--smoke-gray);
   border-bottom: 1px solid #e3e3e3;
   z-index: 99;
 }
@@ -207,6 +212,7 @@ header, section .wrapper {
 .info-heading { 
   cursor: pointer; 
   font-size: 32px;
+  user-select: none;
 }
 
 .info-heading.active {color: white;}
@@ -228,6 +234,23 @@ header, section .wrapper {
   border: 12px solid rgba(250,250,255,0.1);
 }
 
+.example-section .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
+}
+
+.example-heading {
+  font-size: 72px;
+  font-weight: 600;
+}
+
+.example-subheading {
+  font-size: 40px;
+  font-weight: 600;
+}
 @media screen and (min-width: 1025px) {
   .hero-heading {
     font-size: 60px;
