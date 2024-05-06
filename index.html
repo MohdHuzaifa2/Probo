@@ -24,7 +24,7 @@
 
 <body>
   <div class="overlay"></div>
-  <header>
+  <div class="header-wrappe"><header>
     <div class="header-left">
       <a href="/"><img src="./assets/img/logo.webp" alt="Probo Logo" width="106" height="32" class="logo"></a>
     </div>
@@ -54,7 +54,7 @@
         <div class="toggle-line"></div>
       </div>
     </div>
-  </header>
+  </header></div>
   <main>
     <section class="hero-section">
       <div class="wrapper">
@@ -81,15 +81,23 @@
       <div class="wrapper">
         <div class="info-slider">
           <div class="info-headings">
-            <h2 class="info-heading active">Samachar</h2>
-            <h2 class="info-heading">Vichaar</h2>
-            <h2 class="info-heading">Vyapaar</h2>
+            <h2 class="info-heading active" data-desc="From Sports to Entertainment, Economy, Finance and more. Keep an eye on events in your field of interest." data-title="Be in the know">Samachar</h2>
+            <h2 class="info-heading" data-title="Use what you know" data-desc="Build your knowledge and form your opinions and views about upcoming events in the world.">Vichaar</h2>
+            <h2 class="info-heading" data-title="Trade and grow" data-desc="Invest in your opinions about future events and use your knowledge to trade & benefit.">Vyapaar</h2>
           </div>
           <h3 class="info-title">Be in the know</h3>
           <p class="info-desc">From Sports to Entertainment, Economy, Finance and more. Keep an eye on events in your field of interest.</p>
         </div>
         <div class="info-video">
           <video src="./assets/videos/info-video.mp4" width="300" autoplay muted controls></video>
+        </div>
+      </div>
+    </section>
+    <section class="example-section">
+      <div class="wrapper">
+        <div class="example-left">
+          <h2 class="example-heading">Trade when you like,</h2>
+          <h2 class="example-subheading">on what you like.</h2>
         </div>
       </div>
     </section>
@@ -104,6 +112,27 @@
       nav.classList.toggle("active");
       overlay.classList.toggle("active");
     }
+    function changeInfo() {
+      Array.from(document.querySelectorAll('.info-heading')).forEach(h => h.classList.remove('active'));
+      this.classList.add('active');
+      document.querySelector('.info-title').innerText = this.dataset.title;
+      document.querySelector('.info-desc').innerText = this.dataset.desc;
+      i = Array.from(document.querySelectorAll('.info-heading')).indexOf(this);
+      clearInterval(int);
+      int = setInterval(interval, 5000);
+    }
+    Array.from(document.querySelectorAll('.info-heading')).forEach(heading => {
+      heading.addEventListener('click', changeInfo);
+    });
+    
+    var i = 0;
+    function interval() {
+      if (i < 2) {i++}
+      else { i = 0 }
+      
+      Array.from(document.querySelectorAll('.info-heading'))[i].click();
+    }
+    var int = setInterval(interval, 5000);
   </script>
 </body>
 </html>
