@@ -48,6 +48,7 @@ nav button {
     background: none;
 }
 .hero-left {
+    flex-wrap: wrap;
     padding: 0 16px;
 }
 .hero-image {
@@ -69,13 +70,28 @@ nav button {
     justify-content: center;
 }
 .info-slider-section .wrapper {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
-.info-slider { margin-bottom: 50px; }
+.info-slider { 
+    margin-bottom: 50px;
+    max-width: 500px;
+    align-self: center;
+}
 .info-heading {
   font-size: 20px;
   font-weight: 500;
 }
 .info-title, .info-desc {
   font-size: 16px;
+}
+.example-section .wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 30px;
+}
+.example-right {
+    overflow-x: auto;
+    grid-template-columns: auto;
 }

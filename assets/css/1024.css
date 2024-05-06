@@ -8,3 +8,6 @@
 .hero-heading:nth-child(2) {
   font-size: 40px;
 }
+.example-right {
+  grid-template-columns: 1fr;
+}
