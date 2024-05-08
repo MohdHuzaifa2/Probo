@@ -95,3 +95,34 @@ nav button {
     overflow-x: auto;
     grid-template-columns: auto;
 }
+.bottom-highlights .highlight-card:first-child {
+    min-width: min(100%, 600px);
+    background-size: auto 150px;
+}
+.section-heading br {
+    display: none;
+}
+.feature-card {
+    max-width: 100%;
+}
+.heading-left, .heading-right {
+    justify-content: flex-start;
+}
+.heading-left img, .heading-right img {
+    display: none;
+}
+.return-section .section-heading {
+    font-weight: 600;
+}
+.return-section .section-heading br {
+    display: none;
+}
+.footer-link-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+.social-link .social-name {
+    display: none;
+}
+.footer-copyright {
+    justify-content: center;
+}
