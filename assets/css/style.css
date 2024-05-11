@@ -191,7 +191,7 @@ header, .wrapper {
 
 .primary-btn.large { display: none; }
 
-.hero-left input[type="checkbox"] {
+input[type="checkbox"] {
   accent-color: var(--nero);
 }
 
@@ -573,6 +573,17 @@ button {
   max-width: 350px;
 }
 
+.floating-container {
+  display: none;
+  width: 100%;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  text-align: center;
+}
+
 footer {
   padding: 40px 0 0;
 }
@@ -655,24 +666,23 @@ footer {
 }
 
 .copyright-policy {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   color: gray;
   display: flex;
   gap: 10px;
 }
 
 .copyright-policy a {
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--nero);
   line-height: 22px;
+  color: gray;
   text-decoration: none;
 }
 
 .copyright-credits {
   font-weight: 500;
   color: gray;
+  text-align: center;
 }
 
 @media screen and (min-width: 1025px) {
