@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Serif", "Work Sans", sans-serif;
+}
+
+:root {
+    --smoke-gray: #f5f5f5;
+    --nero: #262626;
+    --blue: #197bff;
+    --red: #dc2804;
+}
+
+body {
+    background-color: var(--nero);
+    color: white;
+}
+
+header, footer, header *, footer * {
+    font-family: "Work Sans", sans-serif;
+}
+
+section {
+    padding: 0 16px;
+}
+
+.reads-title-section {
+    padding: 48px 16px;
+}
+
+.reads-title {
+    font-size: clamp(36px, 6vw, 64px);
+    padding-inline: 16px;
+    font-weight: 500;
+}
+
+.story-section .wrapper {
+    padding: 0 16px;
+}
+
+.story {
+    min-height: 340px;
+    display: flex;
+}
+
+.story > .story-style { display: none; margin-bottom: 10px; }
+
+.story-image {
+    flex: 1.25;
+    object-fit: cover;
+    border-radius: 12px 0 0 12px;
+}
+
+.story-content {
+    flex: 1;
+    padding: 0 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    border: 1px solid #545454;
+    border-radius: 0 12px 12px 0;
+}
+
+div.story-style {
+    font-size: 16px;
+    line-height: 20px;
+    color: #e7685a;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Work Sans", sans-serif;
+}
+
+.story-content * {
+    font-family: "Work Sans", sans-serif;
+    color: #b0b0b0;
+}
+
+.story-title {
+    font-size: 28px;
+    line-height: 38px;
+    font-family: "Roboto Serif", serif;
+    color: #fff;
+}
+
+.story-data {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.story-date {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* 768px breakpoint */
+@media screen and (max-width: 768px) {
+    .story {
+        flex-direction: column;
+    }
+    .story-image {
+        width: 100%;
+        border-radius: 0;
+    }
+    .story-content {
+        border-radius: 0;
+    }
+    .story .story-style { display: block; }
+    .story-content .story-style { display: none; }
+}
+
+/* 900px breakpoint */
+@media screen and (max-width: 1024px) {
+    .story-content {
+        padding: 24px;
+    }
+}
