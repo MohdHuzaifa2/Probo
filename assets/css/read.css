@@ -183,7 +183,7 @@ div.story-style {
     gap: 10px;
     padding: 60px 48px;
     background-image: url(../img/banner.webp);
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: 50%;
     background-repeat: no-repeat;
     border-radius: 12px;
@@ -213,8 +213,37 @@ div.story-style {
     color: white;
 }
 
+.citation-section .wrapper {
+    padding: 0 16px;
+}
+
+.citation-section .story-row {
+    overflow-x: auto;
+    scrollbar-width: 0;
+    margin-bottom: 48px;
+}
+
+.citation-section .story {
+    min-width: 320px;
+    flex-direction: column;
+}
+
+.citation-section .story-content, .citation-section .story-image {
+    border-radius: 0 !important;
+}
+
+footer {
+    width: 100%;
+    background: var(--smoke-gray);
+    color: var(--nero);
+}
+
 /* 768px breakpoint */
 @media screen and (max-width: 768px) {
+    section {
+        padding: 0;
+    }
+    
     .story {
         flex-direction: column;
     }
@@ -263,12 +292,12 @@ div.story-style {
         width: 100%;
         flex-direction: row;
     }
-    .story-row .story .story-image {
+    .story-section .story-row .story .story-image {
         flex: 1;
         border-radius: 12px 0 0 12px;
     }
     
-    .story-row .story .story-content {
+    .story-section .story-row .story .story-content {
         flex: 1;
         border-radius: 0 12px 12px 0;
         justify-content: center;
