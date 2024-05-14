@@ -27,18 +27,19 @@ section {
     padding: 0 16px;
 }
 
-.reads-title-section {
+.section-title {
     padding: 48px 16px;
-}
-
-.reads-title {
     font-size: clamp(36px, 6vw, 64px);
     padding-inline: 16px;
     font-weight: 500;
 }
 
 .story-section .wrapper {
-    padding: 0 16px 80px;
+    padding: 0 0 32px;
+}
+
+.stories-container {
+    padding: 32px 16px;
 }
 
 .story {
@@ -81,7 +82,7 @@ div.story-style {
 
 .story-title {
     font-size: 28px;
-    line-height: 38px;
+    line-height: 1.4;
     font-family: "Roboto Serif", serif;
     color: #fff;
 }
@@ -126,19 +127,67 @@ div.story-style {
     line-height: 1.3;
 }
 
+.should-I-section .section-title {
+    padding: 48px 16px 0;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    padding: 0 16px;
+    margin-bottom: 48px;
+    font-family: "Work Sans", sans-serif;
+}
+
+.should-I-section .story-image {
+    flex: 1;
+    border-radius: 0 !important;
+}
+
+.should-I-section .story-content {
+    border: none;
+    padding: 48px !important;
+    gap: 16px;
+    border-radius: 0 !important;
+}
+
+.should-I-section .story-title {
+    font-weight: 400;
+    font-size: clamp(36px, 4.5vw, 48px);
+}
+
+.should-I-section .story-content * { color:  white; }
+
+.should-I-section .story-row .story {
+    width: auto;
+    flex: 1;
+    flex-direction: column;
+}
+
+.should-I-section .story-row .story:nth-child(2) {
+    flex-direction: column-reverse;
+}
+
+.should-I-section .story .story-title {
+    font-size: clamp(26px, 3.5vw, 36px);
+}
+
 /* 768px breakpoint */
 @media screen and (max-width: 768px) {
     .story {
         flex-direction: column;
     }
+
     .story-image {
         width: 100%;
         border-radius: 0;
     }
+
     .story-content {
         border-radius: 0;
     }
+
     .story .story-style { display: block; }
+
     .story-content .story-style { display: none; }
 
     .story-row .story {
@@ -149,6 +198,14 @@ div.story-style {
         max-width: 100%;
         border-radius: 0 !important;
     }
+
+    .should-I-section .section-title {
+        padding-top: 0px;
+    }
+
+    .should-I-section .story-row {
+        flex-direction: column;
+    }
 }
 
 /* 900px breakpoint */
@@ -157,10 +214,10 @@ div.story-style {
         flex: 1;
         min-width: 50%;
     }
-    .story-row {
+    .story-section .story-row {
         flex-direction: column;
     }
-    .story-row .story {
+    .story-section .story-row .story {
         width: 100%;
         flex-direction: row;
     }
@@ -175,7 +232,6 @@ div.story-style {
         justify-content: center;
     }
 }
-
 
 @media screen and (max-width: 1024px) {
     .story-content {
