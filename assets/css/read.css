@@ -171,6 +171,47 @@ div.story-style {
     font-size: clamp(26px, 3.5vw, 36px);
 }
 
+.banner-section .wrapper {
+    padding: 48px 16px;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 60px 48px;
+    background-image: url(../img/banner.webp);
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+.banner * {
+    font-family: "Work Sans", sans-serif;
+}
+
+.banner > div:first-child {
+    font-size: 20px;
+}
+
+.banner-title {
+    font-size: clamp(36px, 4.5vw, 48px);
+    font-weight: 600;
+}
+
+.banner-btn {
+    border: none;
+    outline: none;
+    padding: 16px 48px;
+    margin-top: 20px;
+    background: var(--nero);
+    font-size: 16px;
+    border-radius: 30px;
+    color: white;
+}
+
 /* 768px breakpoint */
 @media screen and (max-width: 768px) {
     .story {
