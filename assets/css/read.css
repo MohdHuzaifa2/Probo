@@ -257,7 +257,7 @@ footer {
         border-radius: 0;
     }
 
-    .story .story-style { display: block; }
+    .story > .story-style { display: block !important;}
 
     .story-content .story-style { display: none; }
 
