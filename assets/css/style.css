@@ -80,6 +80,8 @@ header {
 }
 
 .nav-list a {
+  width: 100%;
+  display: block;
   color: var(--nero);
   font-size: 14px;
   text-decoration: none;
@@ -317,13 +319,16 @@ footer header, footer .header-wrapper {
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    padding: 12px 20px;
     line-height: 20px;
     cursor: pointer;
   }
 
   .nav-list li:hover {
     background: #e3e3e3;
+  }
+
+  .nav-list li a {
+    padding: 12px 20px;
   }
 
   nav button {
