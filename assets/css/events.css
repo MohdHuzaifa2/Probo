@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Work Sans", sans-serif;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -55,13 +56,99 @@ section .wrapper {
     border-bottom: 2px solid var(--nero);
 }
 
-.events-title {
+.topics-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.topics-container button {
+    border: none;
+    outline: none;
+    width: 32px;
+    height: 100%;
+    padding: 14px 7px;
+    background: #e8e8e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topics {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: 0 8px;
+}
+
+.topic {
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #545454;
+    border-radius: 8px;
+    background: white;
+    flex: 1;
+    white-space: nowrap;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    border-bottom: 2px solid #ededed;
+    position: relative;
+}
+
+.topic img:not(.live-img) {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.topic.live .live-img {
+    height: 12px;
+    position: absolute;
+    top: 0px;
+    left: 75%;
+    transform: translateX(-75%);
+}
+
+.events-info {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    align-items: center;
     font-size: 20px;
     font-weight: 600;
     line-height: 28px;
     padding-bottom: 10px;
     margin-bottom: 15px;
     border-bottom: 1px solid #e3e3e3;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-btn {
+    height: 32px;
+    padding: 0 16px;
+    font-size: 14px;
+    background: white;
+    border-radius: 4px;
+    color: #262626;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #ededed;
+}
+
+.filter-btn.active {
+    background: #262626;
+    color: white;
 }
 
 .events-feed {
@@ -138,12 +225,12 @@ p.event-card-title {
 
 .yes-btn {
     color: var(--blue);
-    background: linear-gradient(104.13deg, hsla(0, 0%, 100%, .25) 3.11%, rgba(94, 163, 255, .125) 34.12%), #e8f2ff;
+    background: #e8f2ff;
 }
 
 .no-btn {
     color: var(--red);
-    background: linear-gradient(104.13deg, hsla(0, 0%, 100%, .25) 3.11%, hsla(6, 75%, 63%, .125) 34.12%), #fdf3f2;
+    background: #fdf3f2;
 }
 
 footer .wrapper {
@@ -153,10 +240,16 @@ footer .wrapper {
 /* 768px breakpoint */
 
 @media screen and (max-width: 768px) {
+    header {
+        padding: 0 20px;
+    }
     .main-section .wrapper {
         padding: 0 0 32px;
     }
-    .events-title {
+    .topics-container button {
+        display: none;
+    }
+    .events-info {
         margin: 0 20px 15px;
     }
     .events-feed {
