@@ -257,7 +257,15 @@
 </footer>
 <script>
   const activeTab = document.querySelector(".categories-tab.active");
-  activeTab.scrollIntoView();
+  // activeTab.scrollIntoView();
+  function toggleNav() {
+            const btn = document.querySelector('.nav-toggle-btn');
+            const nav = document.querySelector('nav');
+            const overlay = document.querySelector('.overlay');
+            btn.classList.toggle("active");
+            nav.classList.toggle("active");
+            overlay.classList.toggle("active");
+        }
 </script>
 </body>
 </html>
