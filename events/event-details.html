@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Trades on your Opinion with over 2 crore users. Download the Probo app and Earn Profit by your Opinions. Gyan Jaha, Probo Waha. Select a Event &gt; Trade on Your Opinon &gt; Earn Profits" />
+  <meta name="keywords" content="Probo, probo app, probo app download, probo apk download, probo apk, Opinion Trading, Trade on Opinion, Prediction Earning, Predict &amp; Earn" />
+
+  <title>India to score 25 runs or more at the end of 3 overs vs Ireland? - Probo</title>
+
+  <link rel="shortcut icon" href="../assets/img/favicon.ico">
+  <link rel="favicon" href="../assets/img/favicon.ico">
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="../assets/img/favicon.ico">
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="../assets/img/favicon.ico">
+
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/event-details.css">
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="header-wrapper">
+    <header>
+    <div class="header-left">
+      <a href="../index.html"><img src="../assets/img/logo.webp" alt="Probo Logo" width="106" height="32" class="logo"></a>
+    </div>
+    <div class="header-center">
+      <nav>
+        <ul class="nav-list">
+          <li class="link-item"><a href="./index.html">Trading</a></li>
+          <li class="link-item"><a href="../read.html">Read</a></li>
+          <li class="link-item"><a href="../cares.html">Cares</a></li>
+          <li class="link-item"><a href="#">Careers</a></li>
+        </ul>
+        <div class="download-container">
+          <button class="secondary-btn">Download App</button>
+        </div>
+      </nav>
+      <div class="header-center-right">
+        <div class="consent">For 18 years and above only</div>
+        <button class="secondary-btn">Download App</button>
+        <button class="primary-btn">Login/Signup</button>
+      </div>
+    </div>
+    <div class="header-right">
+      <img src="../assets/img/translation.png" alt="Change Language" class="translate" width="25" height="25">
+      <div class="nav-toggle-btn" onclick="toggleNav()">
+        <div class="toggle-line"></div>
+        <div class="toggle-line"></div>
+        <div class="toggle-line"></div>
+      </div>
+    </div>
+    </header>
+  </div>
+  <main>
+    <section class="main-section">
+        <div class="wrapper">
+            <div class="column-left">
+              <div class="event-header-info">
+                <div class="breadcrumb-container">
+                  <a href="./index.html" class="breadcrumb-link">Home</a>
+                  <svg focusable="false"viewBox="0 0 24 24" width="24"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
+                  <a href="./event-details.html" class="breadcrumb-link active">Event Details</a>
+                </div>
+                <div class="event-main-info">
+                  <img src="../assets/img/India_vs_Ireland.jpeg" alt="" class="event-image" width="96">
+                  <h1>India to score 25 runs or more at the end of 3 overs vs Ireland?</h1>
+                </div>
+                <div class="tab-container">
+                  <div class="tab active">Orderbook</div>
+                  <div class="tab">Timeline</div>
+                  <div class="tab">Overview</div>
+                </div>
+              </div>
+              <div class="data-view-container"></div>
+              <div class="event-overview-container">
+                <div class="overview-title">About the event</div>
+                <div class="overview-col-wrapper">
+                  
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script>
+    let tabs = Array.from(document.querySelectorAll(".tab-container .tab"));
+
+    function toggleNav() {
+        const btn = document.querySelector('.nav-toggle-btn');
+        const nav = document.querySelector('nav');
+        const overlay = document.querySelector('.overlay');
+        btn.classList.toggle("active");
+        nav.classList.toggle("active");
+        overlay.classList.toggle("active");
+    }
+
+    tabs.forEach(tab => {
+        tab.onclick = function() {
+            tabs.forEach(alltabs => {
+                alltabs.classList.remove("active");
+            })
+            this.classList.add("active");
+            
+        }
+    })
+
+    var options = {
+          series: [{
+          name: '',
+          data: [7,7,7.4,7,7,6.50,6.4,]
+        }],
+          chart: {
+            height: 350,
+            type: 'line',
+            zoom: {
+              enabled: false
+            }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          width: 2,
+          curve: 'smooth',
+          colors: "#197bff"
+        },
+        xaxis: {
+          type: 'time',
+          categories: ["7:00","8:00", "9:00","10:00", "11:00", "12:00", "1:00"]
+        },
+        tooltip: {
+          x: {
+            show: false,
+            followCursor: true,
+            format: 'dd/MM/yy HH:mm'
+          },
+          marker: {
+            show: false
+          }
+        },
+        };
+
+        var chart = new ApexCharts(document.querySelector(".data-view-container"), options);
+        chart.render();
+
+  </script>
+</body>
+</html>

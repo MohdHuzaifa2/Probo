@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --smoke-gray: #f5f5f5;
+    --nero: #262626;
+    --blue: #197bff;
+    --red: #dc2804;
+}
+
+.main-section .wrapper {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    padding: 0 40px;
+}
+
+.breadcrumb-container {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-link {
+    text-decoration: none;
+    color: #757575;
+    font-size: 15px;
+}
+
+.breadcrumb-link.active { 
+    color: var(--nero); 
+    font-weight: 500;
+}
+
+.event-header-info {
+    width: 80%;
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.event-main-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.event-image {
+    border-radius: 4px;
+    max-width: 96px;
+    flex: 2;
+}
+
+.event-header-info h1 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.tab-container {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.tab-container .tab {
+    padding: 8px 16px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #545454;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+}
+
+.tab-container .tab.active {
+    color: var(--nero);
+    border-color: #0f0f0f;
+}
+
+.data-view-container {
+    padding: 20px 5px;
+    background: #fff;
+    border: 1px solid #e3e3e3;
+    border-radius: 12px;
+    margin-bottom: 32px;
+}
+
+.event-overview-container {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e3e3e3;
+    border-radius: 12px;
+    margin-bottom: 32px;
+}
+
+@media screen and (max-width: 768px){
+    .main-section .wrapper {
+        padding: 0 20px;
+    }
+    
+    .event-header-info {
+        width: 100%;
+    }    
+    
+    .event-main-info {
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .event-header-info h1 {
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .tab-container { display: none; }
+}
+
+@media screen and (max-width: 1200px) {
+    .main-section .wrapper {
+        grid-template-columns: 1fr;
+    }
+}
